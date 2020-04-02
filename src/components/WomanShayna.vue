@@ -9,10 +9,11 @@
               <div class="pi-pic">
                 <img v-bind:src="itemProduct.galleries[0].photo" alt />
                 <ul>
-                  <li @click="saveKeranjang(itemProduct.id, itemProduct.name, itemProduct.price, itemProduct.galleries[0].photo)" class="w-icon active">
-                    <a
-                      href="#"
-                    >
+                  <li
+                    @click="saveKeranjang(itemProduct.id, itemProduct.name, itemProduct.price, itemProduct.galleries[0].photo)"
+                    class="w-icon active"
+                  >
+                    <a href="#">
                       <i class="icon_bag_alt"></i>
                     </a>
                   </li>
@@ -28,10 +29,7 @@
                     <h5>{{ itemProduct.name }}</h5>
                   </a>
                 </router-link>
-                <div class="product-price">
-                  ${{ itemProduct.price }}
-                  <span>$35.00</span>
-                </div>
+                <div class="product-price">${{ itemProduct.price }}</div>
               </div>
             </div>
           </carousel>
@@ -63,7 +61,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://shayna-backend.belajarkoding.com/api/products")
+      .get("http://localhost:8000/api/products")
       .then(res => (this.products = res.data.data.data))
       // eslint-disable-next-line no-console
       .catch(err => console.log(err));
@@ -81,6 +79,29 @@ export default {
       const parsed = JSON.stringify(this.keranjangUser);
       localStorage.setItem("keranjangUser", parsed);
     }
+  }
+};
+</script>
+
+<script>
+import carousel from "vue-owl-carousel";
+import axios from "axios";
+
+export default {
+  name: "WomanShayna",
+  components: {
+    carousel
+  },
+  data() {
+    return {
+      products: []
+    };
+  },
+  mounted() {
+    axios
+      .get("http://localhost:8000/api/products")
+      .then(res => (this.products = res.data.data.data))
+      .catch(err => console.log(err));
   }
 };
 </script>

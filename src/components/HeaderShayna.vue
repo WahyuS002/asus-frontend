@@ -5,10 +5,10 @@
       <div class="container">
         <div class="ht-left">
           <div class="mail-service">
-            <i class="fa fa-envelope"></i> hello.shayna@gmail.com
+            <i class="fa fa-envelope"></i> syahputrawahyu61@gmail.com
           </div>
           <div class="phone-service">
-            <i class="fa fa-phone"></i> +628 22081996
+            <i class="fa fa-phone"></i> +62 82375558906
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
                   </div>
                   <div class="select-button">
                     <a href="#" class="primary-btn view-card">
-                      <router-link to="/cart" style="color: #FFF;">VIEW CARD</router-link>
+                      <router-link to="/cart" style="color: #FFF;">VIEW CART</router-link>
                     </a>
                     <a href="#" class="primary-btn checkout-btn">CHECK OUT</a>
                   </div>
@@ -105,7 +105,7 @@ export default {
   },
   computed: {
     totalHarga() {
-      return this.keranjangUser.reduce(function(items, data){
+      return this.keranjangUser.reduce(function(items, data) {
         return items + data.price;
       }, 0);
     }

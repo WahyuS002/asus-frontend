@@ -11,9 +11,9 @@
               </a>
             </div>
             <ul>
-              <li>Address: Setra Duta, Bandung</li>
-              <li>Phone: +628 22081996</li>
-              <li>Email: hello.shayna@gmail.com</li>
+              <li>Address: Jl. Kampar 03 Bengkulu</li>
+              <li>Phone: +62 82375558906</li>
+              <li>Email: syahputrawahyu61@gmail.com</li>
             </ul>
             <div class="footer-social">
               <a href="#">
@@ -77,7 +77,7 @@
           <div class="col-lg-12">
             <div class="copyright-text">
               Copyright &copy;
-              2019 - 2025 All rights reserved | Shayna
+              2019 - 2025 All rights reserved | Notip
             </div>
           </div>
         </div>
@@ -89,6 +89,6 @@
 
 <script>
 export default {
-    name: 'FooterShayna'
-}
+  name: "FooterShayna"
+};
 </script>
